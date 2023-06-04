@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Shopay</string>
+    <string name="facebook_app_id">3495192704025688</string>
+    <string name="fb_login_protocol_scheme">fb3495192704025688</string>
+    <string name="facebook_client_token">56789</string>
+
+</resources>
+
+
