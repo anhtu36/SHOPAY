@@ -1,4 +1,5 @@
 import 'package:ecommerce_app/views/components/app_bar.dart';
+import 'package:ecommerce_app/views/components/bottom_navigation_bar.dart';
 import 'package:ecommerce_app/views/components/popular_list.dart';
 import 'package:ecommerce_app/views/components/search_bar.dart';
 import 'package:ecommerce_app/views/components/tab_bar.dart';

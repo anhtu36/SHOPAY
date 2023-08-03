@@ -34,9 +34,7 @@ class _TabBarCartState extends State<TabBarCart> {
           ),
           child: IconButton(
             onPressed: () {
-              Navigator.of(context).push(MaterialPageRoute(
-                builder: (context) => HomePages(),
-              ));
+              Navigator.of(context).pop();
             },
             icon: const Image(
               image: AssetImage('assets/images/left.png'),
@@ -70,11 +68,13 @@ class _TabBarCartState extends State<TabBarCart> {
               ],
             ),
             child: IconButton(
-              onPressed: () {Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => const CartPage(),
-                          ));},
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const CartPage(),
+                    ));
+              },
               icon: const Image(
                 image: AssetImage('assets/images/shopping-bag.png'),
               ),

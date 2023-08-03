@@ -24,29 +24,28 @@ class CartProvider with ChangeNotifier {
   }
 
   void _getPrefItems() async {
-    SharedPreferences prefs = await SharedPreferences.getInstance();
-    _counter = prefs.getInt('cart_item') ?? 0;
-    if (_counter < 0) {
-      _counter = 0;
-    }
-    _totalPrice = prefs.getDouble('total_price') ?? 0.0;
-    if (_totalPrice < 0) {
-      _totalPrice = 0.0;
-    }
-    notifyListeners();
+  SharedPreferences prefs = await SharedPreferences.getInstance();
+  _counter = prefs.getInt('cart_item') ?? 0;
+  if (_counter < 0) {
+    _counter = 0;
   }
+  _totalPrice = prefs.getDouble('total_price') ?? 0.0;
+  if (_totalPrice < 0) {
+    _totalPrice = 0.0;
+  }
+  notifyListeners();
+}
+
+
 
   void addTotalPrice(double productPrice) {
     _totalPrice = _totalPrice + productPrice;
-    getCounter();
     _setPrefItems();
     notifyListeners();
   }
 
   void removeTotalPrice(double productPrice) {
     _totalPrice = _totalPrice - productPrice;
-    getCounter();
-
     _setPrefItems();
     notifyListeners();
   }

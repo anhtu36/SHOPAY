@@ -37,11 +37,7 @@ class _CartAppBarState extends State<CartAppBar> {
                   ],
                 ),
                 child: IconButton(
-                  onPressed: () { Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) => const HomePages(),
-              ));},
+                  onPressed: () { Navigator.of(context).pop();},
                   icon: const Image(
                     image: AssetImage('assets/images/left.png'),
                   ),

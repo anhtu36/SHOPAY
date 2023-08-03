@@ -12,8 +12,9 @@ class _SearchBarrState extends State<SearchBarr> {
   final TextEditingController search = TextEditingController();
   @override
   void dispose() {
+        search.dispose();
+
     super.dispose();
-    search;
   }
 
   @override
